@@ -1,0 +1,19 @@
+fun main() {
+    val notas = arrayOfNulls<Double>(5)  
+
+    
+    notas[0] = 7.5
+    notas[1] = 8.0
+    notas[2] = 6.0
+    notas[3] = 9.0
+    notas[4] = 7.0
+
+    var suma = 0.0
+    for (n in notas) {
+        println(n)
+        suma += n ?: 0.0   
+    }
+
+    val promedio = suma / notas.size
+    println("Promedio: $promedio")
+}
